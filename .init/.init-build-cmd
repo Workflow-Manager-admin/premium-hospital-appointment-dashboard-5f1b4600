@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/premium-hospital-appointment-dashboard-5f1b4600/hospital_dashboard_frontend"
+}
