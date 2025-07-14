@@ -1,0 +1,3 @@
+.notifications-main { padding: 2rem; }
+.notifications-main ul { list-style: none; padding: 0; }
+.notifications-main li { margin: 0.7rem 0; color: #34415a; padding: 0.7rem 1.2rem; background: #f6fafd; border-radius: 0.7rem;}

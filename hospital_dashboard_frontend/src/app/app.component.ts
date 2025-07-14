@@ -8,5 +8,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'HospitalPro';
+
+  // PUBLIC_INTERFACE
+  getPageTitle(): string {
+    // Not using window (no-undef error and SSR); placeholder logic only
+    return this.title;
+  }
 }

@@ -1,0 +1,63 @@
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dash-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dashboard-main .dash-card {
+  background: var(--background-card, #fff);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px 0 rgb(32 36 60 / 13%);
+  transition: box-shadow 0.15s cubic-bezier(0.4,0,0.2,1), transform 0.09s cubic-bezier(0.4,0,0.2,1);
+  padding: 2rem;
+  min-width: 220px;
+  min-height: 120px;
+  flex: 1 1 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dash-card.dash-welcome { flex: 2 1 285px; min-width: 200px; background: linear-gradient(90deg, #e1ecf7 0%, #f7f9fc 100%); }
+.dash-card.dash-widget { flex: 1 1 140px; text-align: center; }
+.dash-card.dash-completed { background: linear-gradient(90deg, #b4f6d7, #f0f8ff); }
+.dash-card.dash-searchbar { flex: 1 1 200px; max-width: 260px; align-items: center; justify-content: flex-start; }
+.dash-card.dash-searchbar input {
+  border: none; outline: none; width: 80%; background: #f2f3f7; padding: 0.6rem 1.2rem; border-radius: 1.2rem 0 0 1.2rem; font-size: 1rem;
+}
+.dash-card.dash-searchbar .search-icon { margin-left: -2rem; color: #6b7280; }
+.dash-row.dash-main-content { flex: 3; }
+.dash-card.dash-mini-calendar { flex: 1.5 1 250px; display: flex; flex-direction: column; }
+.calendar-placeholder { margin: 1.2rem 0; width: 100%; height: 110px; background: #f5faff; border-radius: 1rem; display: grid; place-items: center; font-size: 1rem; color: #9cb6c6;}
+.dash-card.dash-listupcoming {
+  flex: 3 1 440px;
+  min-width: 260px;
+}
+.appointments-list {
+  margin: 0; padding: 0; list-style: none;
+}
+.appointments-list li {
+  padding: 0.6rem 0.2rem; border-bottom: 1px solid #ebebf4; font-size: 1rem; display: flex; gap: .7rem; align-items: center;
+}
+.appointments-list li:last-child { border-bottom: none; }
+.appointments-list .patient { font-weight: 600; color: var(--primary, #1A237E);}
+.appointments-list .status { border-radius: 0.6rem; padding: 0.1rem 0.7rem; font-size: .85rem; margin-left: auto;}
+.appointments-list .status.confirmed { background: #e9fbe6; color: #38a62a; }
+.appointments-list .status.pending { background: #fff3e4; color: #e76a1e; }
+.appointments-list .status.rescheduled { background: #f7ebfe; color: #813fec; }
+.dash-card.dash-analytics { flex: 2.7 1 290px; }
+.dash-card .chart-placeholder { height: 110px; background: #eef6f9; border-radius: 0.8rem; display: grid; place-items: center; color: #9ca5b7; margin: 1.1rem 0; }
+.dash-row.dash-bottom-widgets { }
+.dash-card.dash-notification, .dash-card.dash-reminders { flex: 1 1 190px; }
+.dash-card.dash-notification ul, .dash-card.dash-reminders ul { margin: 0; padding-left: 1.6rem; }
+.dash-card.dash-notification li.read { opacity: 0.6; }
+@media screen and (max-width: 1020px) {
+  .dash-row { flex-direction: column; }
+  .dash-card { min-width: unset; }
+}

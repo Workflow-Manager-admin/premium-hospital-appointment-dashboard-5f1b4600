@@ -1,0 +1,62 @@
+<div class="dashboard-main">
+  <div class="dash-row">
+    <div class="dash-card dash-welcome">
+      <h2>Welcome, <span class="username">Dr. Premiere</span></h2>
+      <p>Here is a summary of today's activity at a glance.</p>
+    </div>
+    <div class="dash-card dash-widget">
+      <div class="dash-widget-label">Total Appointments</div>
+      <div class="dash-widget-value">36</div>
+    </div>
+    <div class="dash-card dash-widget">
+      <div class="dash-widget-label">Patients Admitted</div>
+      <div class="dash-widget-value">7</div>
+    </div>
+    <div class="dash-card dash-widget dash-completed">
+      <div class="dash-widget-label">Completed Today</div>
+      <div class="dash-widget-value">28</div>
+    </div>
+    <div class="dash-card dash-searchbar">
+      <input type="text" placeholder="Search appointments..." />
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+  <div class="dash-row dash-main-content">
+    <div class="dash-card dash-mini-calendar">
+      <h3>Quick Calendar</h3>
+      <div class="calendar-placeholder">[Mini Calendar]</div>
+    </div>
+    <div class="dash-card dash-listupcoming">
+      <h3>Upcoming Appointments</h3>
+      <ul class="appointments-list">
+        <li *ngFor="let appt of upcomingAppointments">
+          <span class="patient">{{ appt.patient }}</span>
+          <span class="date">{{ appt.date }} {{ appt.time }}</span>
+          <span class="doctor">w/ {{ appt.doctor }}</span>
+          <span [class]="getStatusClass(appt.status)">{{ appt.status }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="dash-card dash-analytics">
+      <h3>Analytics</h3>
+      <div class="chart-placeholder">[Analytics Chart/Graphs Here]</div>
+    </div>
+  </div>
+  <div class="dash-row dash-bottom-widgets">
+    <div class="dash-card dash-notification">
+      <h3>Notifications</h3>
+      <ul>
+        <li>🆕 New patient registered.</li>
+        <li>Reminder: Meeting at 3:00 PM.</li>
+        <li class="read">All records synced successfully.</li>
+      </ul>
+    </div>
+    <div class="dash-card dash-reminders">
+      <h3>Reminders</h3>
+      <ul>
+        <li>Send daily summary to management</li>
+        <li>Review tomorrow's appointments</li>
+      </ul>
+    </div>
+  </div>
+</div>

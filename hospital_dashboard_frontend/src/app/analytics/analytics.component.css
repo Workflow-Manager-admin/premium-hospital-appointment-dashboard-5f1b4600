@@ -1,0 +1,2 @@
+.analytics-main { padding: 2rem 1rem; }
+.analytics-charts, .analytics-reports { background: #f4fafd; min-height: 110px; border-radius: 1rem; margin-bottom: 2rem; display: grid; place-items: center; color: #a8b3ce;}

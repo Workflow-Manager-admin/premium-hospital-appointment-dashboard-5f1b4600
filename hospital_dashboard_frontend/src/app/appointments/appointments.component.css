@@ -1,0 +1,7 @@
+.appointments-main { padding: 2.3rem 1.2rem; }
+.appointments-tools { display: flex; gap: 1.2rem; margin-bottom: 2rem; align-items: center; }
+.appointments-tools input { border: 1px solid #dde3ef; padding: 0.6rem 1.1rem; border-radius: 1rem; }
+.btn-primary { background: var(--primary, #1A237E); color: white; border: none; border-radius: 1rem; padding: 0.5rem 1.3rem; font-weight: 500;}
+.btn-create { background: var(--accent, #FFC107); color: #1a2266; border: none; border-radius: 1rem; padding: 0.5rem 1.2rem; font-weight: 500; }
+.appointments-calendar { margin-bottom: 2rem; background: #f3f4fa; padding: 1rem; border-radius: 1rem; }
+.appointments-list {}
